@@ -61,6 +61,12 @@
                     window.authorizations.add("api_key", new ApiKeyAuthorization("api_key", key, "query"));
                 }
             }
+            
+            function log() {
+                if ('console' in window) {
+                    console.log.apply(console, arguments);
+                }
+            }
 
             $('#input_apiKey').change(function() {
                 addApiKeyAuthorization();
